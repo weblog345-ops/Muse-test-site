@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aoi.design | Webデザイナー ポートフォリオ</title>
+<meta name="description" content="小さなブランドの“らしさ”を引き出すWebデザイン。架空のWebデザイナー「aoi.design」のポートフォリオサイト（サンプル）です。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <a class="logo" href="#top">aoi<span>.design</span></a>
+  <nav class="global-nav" aria-label="メインメニュー">
+    <a href="#works">Works</a>
+    <a href="#about">About</a>
+    <a href="#service">Service</a>
+    <a href="#journal">Journal</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-cta" href="#contact">無料相談</a>
+  </nav>
+  <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="モバイルメニュー">
+  <a href="#works">Works</a>
+  <a href="#about">About</a>
+  <a href="#service">Service</a>
+  <a href="#journal">Journal</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="strong">無料相談</a>
+</nav>
+
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/poster.jpg" aria-hidden="true">
+    <source src="assets/hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="eyebrow anim a1"><span class="eyebrow-line" aria-hidden="true"></span>WEB DESIGNER — PORTFOLIO</p>
+    <h1 class="anim a2"><span class="h-line">想いを、</span><br><span class="h-line grad">伝わる</span><span class="h-line">カタチに。</span></h1>
+    <p class="lead anim a3">小さなブランドの“らしさ”を引き出す、Webデザイン。<br>戦略からデザイン・運用まで、まるごと伴走します。</p>
+    <div class="hero-actions anim a4">
+      <a class="btn btn-dark" href="#works">制作実績を見る <span aria-hidden="true">→</span></a>
+      <a class="btn btn-light" href="#contact">お問い合わせ</a>
+    </div>
+    <p class="hero-note anim a5">制作実績 120件+　・　リピート率 96%　・　全国対応（オンライン）</p>
+  </div>
+  <p class="scroll-hint" aria-hidden="true">SCROLL<span class="scroll-line"></span></p>
+</section>
+
+<main>
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo reveal">
+        <img src="assets/about.jpg" alt="作業中のWebデザイナー" loading="lazy">
+      </div>
+      <div class="reveal">
+        <p class="sec-label">ABOUT</p>
+        <h2 class="sec-title left">はじめまして、<br>Webデザイナーの白瀬あおいです。</h2>
+        <p class="body-text">デザイン事務所での勤務を経て、2020年に独立。小さなカフェやサロン、工房など、地域に根ざしたブランドのWebサイトを中心に手がけてきました。</p>
+        <p class="body-text">大切にしているのは、「おしゃれ」だけで終わらせないこと。お店の空気感や、作り手の想いがちゃんと伝わって、予約や購入といった“次の行動”につながるサイトを目指しています。</p>
+        <dl class="profile-list">
+          <div><dt>拠点</dt><dd>東京都（全国オンライン対応）</dd></div>
+          <div><dt>スキル</dt><dd>Webデザイン / ディレクション / 写真のディレクション / 簡単な更新サポート</dd></div>
+          <div><dt>好きなもの</dt><dd>朝のコーヒー、植物、紙の色見本</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="wrap stats reveal">
+      <div class="stat"><p class="stat-num"><span class="count" data-to="120">0</span><span class="unit">件+</span></p><p class="stat-label">制作実績</p></div>
+      <div class="stat"><p class="stat-num"><span class="count" data-to="96">0</span><span class="unit">%</span></p><p class="stat-label">リピート率</p></div>
+      <div class="stat"><p class="stat-num"><span class="count" data-to="8">0</span><span class="unit">年</span></p><p class="stat-label">デザイナー歴</p></div>
+      <div class="stat"><p class="stat-num"><span class="count" data-to="49" data-decimal="1">0</span><span class="unit">/ 5.0</span></p><p class="stat-label">お客様評価</p></div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section class="section alt" id="works">
+    <div class="wrap">
+      <p class="sec-label center reveal">WORKS</p>
+      <h2 class="sec-title center reveal">制作実績</h2>
+      <p class="sec-lead reveal">お店の空気感が伝わることを、いちばん大切にしています。<br>カードを押すと、案件の詳しい内容が見られます。</p>
+      <div class="filters reveal" id="workFilters" role="group" aria-label="実績の絞り込み"></div>
+      <p class="result-count" id="workCount" aria-live="polite"></p>
+      <div class="works-grid" id="worksGrid"></div>
+      <p class="empty" id="worksEmpty" hidden>該当する実績がありません。</p>
+    </div>
+  </section>
+
+  <!-- Service -->
+  <section class="section" id="service">
+    <div class="wrap">
+      <p class="sec-label center reveal">SERVICE</p>
+      <h2 class="sec-title center reveal">サービスと料金の目安</h2>
+      <p class="sec-lead reveal">内容によって変わりますが、目安はこのくらいです。<br>まずは無料相談で、お話を聞かせてください。</p>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <p class="service-icon" aria-hidden="true">◈</p>
+          <h3>Webサイト制作</h3>
+          <p class="price">¥300,000〜</p>
+          <p class="body-text">店舗サイト、コーポレートサイト、ECサイトなど。企画から公開まで一括で対応します。</p>
+          <ul>
+            <li>ヒアリング・企画構成</li>
+            <li>デザイン（PC／スマホ）</li>
+            <li>コーディング・公開作業</li>
+            <li>基本的なSEO設定</li>
+          </ul>
+        </article>
+        <article class="service-card featured reveal">
+          <p class="badge">人気</p>
+          <p class="service-icon" aria-hidden="true">✦</p>
+          <h3>ブランディング</h3>
+          <p class="price">¥150,000〜</p>
+          <p class="body-text">ロゴやカラーなど、ブランドの土台づくりから。サイトと合わせて頼む方が多いメニューです。</p>
+          <ul>
+            <li>ロゴデザイン</li>
+            <li>カラー・フォント設計</li>
+            <li>名刺・ショップカード</li>
+            <li>ブランドガイドライン</li>
+          </ul>
+        </article>
+        <article class="service-card reveal">
+          <p class="service-icon" aria-hidden="true">❋</p>
+          <h3>運用サポート</h3>
+          <p class="price">¥30,000〜 <span class="per">/ 月</span></p>
+          <p class="body-text">公開して終わりにしないための、更新や改善の伴走プランです。</p>
+          <ul>
+            <li>月2回までの更新代行</li>
+            <li>アクセスレポート（月1回）</li>
+            <li>改善提案</li>
+            <li>チャット相談（平日）</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="flow reveal">
+        <h3 class="flow-title">制作の流れ</h3>
+        <ol class="flow-steps">
+          <li><span class="step-num">01</span><h4>ヒアリング</h4><p>オンラインで60分ほど。想いやお悩みを伺います。</p></li>
+          <li><span class="step-num">02</span><h4>企画・デザイン</h4><p>構成案とトップページデザインをご提案します。</p></li>
+          <li><span class="step-num">03</span><h4>制作・確認</h4><p>全ページを制作し、確認しながら仕上げます。</p></li>
+          <li><span class="step-num">04</span><h4>公開・運用</h4><p>公開後も、更新や改善を一緒に続けます。</p></li>
+        </ol>
+      </div>
+
+      <div class="voices">
+        <article class="voice reveal">
+          <p class="voice-text">「写真の雰囲気そのままのサイトになって、予約が前年の1.4倍になりました。更新の相談にもすぐ乗ってくれるので心強いです。」</p>
+          <p class="voice-meta">カフェ経営 ・ 40代</p>
+        </article>
+        <article class="voice reveal">
+          <p class="voice-text">「ロゴからサイトまで一貫して頼めたのが良かったです。お客様から『お店の感じがよく分かる』と言われるようになりました。」</p>
+          <p class="voice-meta">陶芸工房 ・ 30代</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journal -->
+  <section class="section alt" id="journal">
+    <div class="wrap">
+      <p class="sec-label center reveal">JOURNAL</p>
+      <h2 class="sec-title center reveal">ジャーナル</h2>
+      <p class="sec-lead reveal">デザインのこと、仕事のこと。月に数回、短く書いています。<br>カードを押すと記事が読めます。</p>
+      <div class="journal-grid" id="journalGrid"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="wrap narrow">
+      <p class="sec-label center reveal">CONTACT</p>
+      <h2 class="sec-title center reveal">お問い合わせ</h2>
+      <p class="sec-lead reveal">「まだ何も決まっていない」段階でも大丈夫です。<br>2営業日以内に返信します。</p>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <label>お名前 <span class="req">必須</span>
+          <input type="text" name="name" id="fName" autocomplete="name" placeholder="山田 花子">
+        </label>
+        <label>メールアドレス <span class="req">必須</span>
+          <input type="email" name="email" id="fEmail" autocomplete="email" placeholder="you@example.com">
+        </label>
+        <label>ご相談の種類
+          <select name="type" id="fType">
+            <option>Webサイト制作</option>
+            <option>ブランディング</option>
+            <option>運用サポート</option>
+            <option>その他・まだ未定</option>
+          </select>
+        </label>
+        <label>メッセージ <span class="req">必須</span>
+          <textarea name="message" id="fMsg" rows="5" placeholder="お店のことや、作りたいサイトのイメージを教えてください。"></textarea>
+        </label>
+        <p class="form-error" id="formError" role="alert" hidden></p>
+        <button type="submit" class="btn btn-dark submit">送信する</button>
+        <p class="form-note">※ このサイトはサンプルのため、フォームは実際には送信されません。送信ボタンで受付完了の表示まで体験できます。</p>
+      </form>
+      <div class="form-done" id="formDone" hidden>
+        <p class="done-mark" aria-hidden="true">✓</p>
+        <h3>受け付けました</h3>
+        <p>お問い合わせありがとうございます。2営業日以内に返信します。<br>（サンプルサイトのため、実際の送信は行われていません）</p>
+        <button type="button" class="btn btn-light" id="formReset">フォームに戻る</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="logo light">aoi<span>.design</span></p>
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <a href="#works">Works</a><a href="#about">About</a><a href="#service">Service</a><a href="#journal">Journal</a><a href="#contact">Contact</a>
+    </nav>
+    <p class="foot-note">このサイトは、架空のWebデザイナーを題材にしたサンプルサイトです。登場する実績・人物・数値はすべてサンプルです。</p>
+    <p class="copy">© 2026 aoi.design</p>
+  </div>
+</footer>
+
+<!-- 実績・記事の詳細モーダル -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" id="modalClose" aria-label="閉じる">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
